@@ -1,40 +1,59 @@
-import java.util.*;
-class Deck{
-    ArrayList<Card> deck;
+//Deck.java
 
-    public Deck(){
-        this.deck = new ArrayList<>();
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
+
+public class Deck {
+    private ArrayList<Card> deck; // Stores the deck of cards
+    private static final String[] SUITS = {"Hearts", "Diamonds", "Clubs", "Spades"};
+    private static final String[] RANKS = {
+        "2", "3", "4", "5", "6", "7", "8", "9", "10", 
+        "Jack", "Queen", "King", "Ace"
+    };
+
+    // Constructor to initialize the deck
+    public Deck() {
+        createDeck();
     }
 
-    public void createDeck(){
-        String[] ranks = {"2","3","4","5","6","7","8","9","10","Jack","Queen","King","Ace"};
-        String[] suits = {"Clubs", "Diamonds", "Hearts", "Spades"};
-
-        for (String rank : ranks){
-            for(String suit : suits){
-                deck.add(new Card(rank, suit));
+    // Create a deck of 52 cards
+    public void createDeck() {
+        deck = new ArrayList<>();
+        for (String suit : SUITS) {
+            for (String rank : RANKS) {
+                deck.add(new Card(suit, rank));
             }
         }
     }
 
-    public void displayDeck(){
-        for (Card card : deck){
-            System.out.println(card);
+    // Print all cards in the deck
+    public void printDeck() {
+        for (Card card : deck) {
+            card.printCard();
         }
     }
 
-    public void shuffleDeck(){
+    // Find a specific card in the deck
+    public boolean findCard(String rank, String suit) {
+        for (Card card : deck) {
+            if (card.getRank().equalsIgnoreCase(rank) && card.getSuit().equalsIgnoreCase(suit)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // Shuffle the deck
+    public void shuffleDeck() {
         Collections.shuffle(deck);
     }
 
-    public void randomCards(){
-        for(int i=0; i<5; i++){
-            System.out.println("Card "+i+": "+deck.get(0));
-            deck.remove(deck.get(0));
+    // Deal 5 random cards
+    public void dealCard() {
+        Random rand = new Random();
+        for (int i = 0; i < 5; i++) {
+            deck.get(rand.nextInt(deck.size())).printCard();
         }
-    }
-
-    public void sizeOfdeck(){
-        System.out.println("Current size of deck: "+deck.size());
     }
 }
