@@ -26,4 +26,11 @@ class Deck{
     public void shuffleDeck(){
         Collections.shuffle(deck);
     }
+
+    public void randomCards(){
+        for(int i=0; i<5; i++){
+            System.out.println("Card "+i+": "+deck.get(0));
+            deck.remove(deck.get(0));
+        }
+    }
 }
