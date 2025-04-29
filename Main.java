@@ -5,6 +5,10 @@
 
 class Main{
     public static void main(String[] args){
+        
+        Deck deck = new Deck();
+        System.out.println("\n******* Creating Deck *******");
+        deck.createDeck();
       
     }  
 }
