@@ -16,6 +16,17 @@ class Main{
         System.out.println("\n******* Print Deck *******");
         deck.displayDeck();
         deck.sizeOfdeck();
-      
+
+        System.out.println("\n******* Cards for user 1 *******\n");
+        deck.randomCards();
+        deck.sizeOfdeck();
+
+        System.out.println("\n******* Cards for user 2 *******\n");
+        deck.randomCards();
+        deck.sizeOfdeck();
+
+        System.out.println("\n******* Cards for user 3 *******\n");
+        deck.randomCards();
+        deck.sizeOfdeck();
     }  
 }
