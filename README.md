@@ -1,16 +1,17 @@
 # Card Deck Project
 
--- Directly Committed from GIT BASH --
-
 ## 📖 Project Description
 
 This Java project implements a **Card Deck System** using **ArrayList/Vector**. The system allows users to:
 
 1. **Create a Deck** - Initializes a standard deck of 52 playing cards.
 2. **Print the Deck** - Displays all cards in the deck.
-3. **Print a Card** - Displays a particular card. 
-4. **Deal Cards** - Draws 5 random cards from the deck.
-5. **Shuffle the Deck** - Randomizes the order of cards in the deck.
+3. **Print a Specific Card** - Displays a particular card based on user input.
+4. **Find Same Suit Cards** - Finds all cards that belong to the same suit.
+5. **Compare Cards** - Checks if two cards have the same rank.
+6. **Find a Specific Card** - Searches for a card in the deck.
+7. **Deal Cards** - Draws 5 random cards from the deck.
+8. **Shuffle the Deck** - Randomizes the order of cards in the deck.
 
 This project follows proper **coding guidelines**, includes **detailed comments**, and ensures **modular implementation**.
 
@@ -30,6 +31,9 @@ CardDeck/:
 | Deck.java | createDeck()   | Initializes the deck with 52 cards |
 |          | printDeck()    | Displays all cards in the deck |
 |          | printCard()    | Prints a specific card |
+|          | sameCard()     | Finds cards with the same suit |
+|          | compareCard()  | Compares two cards by rank |
+|          | findCard()     | Searches for a specific card |
 |          | dealCard()     | Draws 5 random cards |
 |          | shuffleDeck()  | Shuffles the deck |
 
@@ -56,10 +60,13 @@ CardDeck/:
 1. Create Deck
 2. Print Deck
 3. Print a Card
-4. Deal 5 Random Cards
-5. Shuffle Deck
-6. Exit
-Enter your choice: 4
+4. Find Same Suit Cards
+5. Compare Two Cards
+6. Find a Specific Card
+7. Deal 5 Random Cards
+8. Shuffle Deck
+9. Exit
+Enter your choice: 7
 
 Dealing 5 random cards:
 1. Ace of Hearts
@@ -68,10 +75,6 @@ Dealing 5 random cards:
 4. 2 of Clubs
 5. 10 of Hearts
 ```
-
-## 📜 Contributors
-
-- **utkarsh Lakhani** - [GitHub Profile](https://github.com/Utkarsh-64)
 
 ## 📄 License
 
