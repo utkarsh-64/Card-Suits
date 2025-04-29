@@ -9,6 +9,13 @@ class Main{
         Deck deck = new Deck();
         System.out.println("\n******* Creating Deck *******");
         deck.createDeck();
+
+        System.out.println("\n******* Deck Shuffleing *******");
+        deck.shuffleDeck();
+        
+        System.out.println("\n******* Print Deck *******");
+        deck.displayDeck();
+        deck.sizeOfdeck();
       
     }  
 }
