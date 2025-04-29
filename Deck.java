@@ -33,4 +33,8 @@ class Deck{
             deck.remove(deck.get(0));
         }
     }
+
+    public void sizeOfdeck(){
+        System.out.println("Current size of deck: "+deck.size());
+    }
 }
